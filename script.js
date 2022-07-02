@@ -25,11 +25,9 @@ function storeBook() {
     const book = new Book();
     library.push(book);
 
-    localStorage.setItem('library', JSON.stringify(library));
     saveData();
     form.reset();
 
-    console.log(library);
     render();
 }
 
@@ -87,7 +85,6 @@ function createBook(book) {
 
     read.addEventListener('click', () => {
         book.read ? book.read = false : book.read = true;
-        book.read ? (read.textContent = 'Read', read.style.backgroundColor = 'green') : (read.textContent = 'Not read', read.style.backgroundColor = 'red');
         saveData();
     });
 
