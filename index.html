@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./script.js" defer></script>
+
     <title>Library</title>
 </head>
 <body>
-    
+    <header>
+        <form id="form">
+            <label for="title">Title</label>
+            <input type="text" id="title" required>
+            <label for="author">Author</label>
+            <input type="text" id="author" required>
+            <label for="read">Read</label>
+            <input type="checkbox" name="read" id="read">
+            <br>
+            <button type="submit" form="form" id="submit">Add book</button>
+            <button id="remove-all">Remove all boocks</button>
+        </form>
+    </header>
+    <div id="books">
+        
+    </div>
 </body>
 </html>
