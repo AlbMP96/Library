@@ -68,6 +68,7 @@ function createBook(book) {
     const author = document.createElement('p');
     const read = document.createElement('p');
     const remove = document.createElement('button');
+    const lineBreak = document.createElement('br');
 
     card.classList.add('book-card');
     card.setAttribute('id', library.indexOf(book));
@@ -91,6 +92,8 @@ function createBook(book) {
     });
 
     card.appendChild(read);
+
+    card.appendChild(lineBreak);
 
     remove.classList.add('remove-book');
     remove.textContent = 'Remove';

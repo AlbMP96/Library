@@ -1,1 +1,78 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+body {
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  background-color: rgb(221, 221, 221);
+}
+
+header {
+  text-align: center;
+  background-color: rgb(126, 208, 255);
+  box-shadow: 10px 10px 8px #888888;
+}
+header form {
+  font-size: 2rem;
+  padding: 10px;
+}
+header form input {
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+header form input[type=checkbox] {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+header form button {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: rgb(82, 159, 204);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+header form button:hover {
+  filter: brightness(75%);
+}
+
+#bookshelf {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#bookshelf .book-card {
+  background-color: rgb(218, 230, 255);
+  border: 1px solid black;
+  box-shadow: 10px 10px 8px #888888;
+}
+#bookshelf .book-card > * {
+  padding: 10px;
+}
+#bookshelf .book-card .read {
+  display: inline-block;
+  width: max-content;
+  padding: 10px;
+  color: white;
+}
+#bookshelf .book-card .read:hover {
+  filter: brightness(75%);
+}
+#bookshelf .book-card button {
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: rgb(82, 159, 204);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+#bookshelf .book-card button:hover {
+  filter: brightness(75%);
+}/*# sourceMappingURL=main.css.map */

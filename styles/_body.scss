@@ -1,0 +1,51 @@
+@use 'variables';
+
+#bookshelf {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+
+    text-align: center;
+    font-size: 1.5rem;
+
+    .book-card {
+        background-color: rgb(218, 230, 255);
+        border: 1px solid black;
+        box-shadow: variables.$shadow;
+
+        & > * {
+            padding: 10px;
+        }
+
+        .read {
+            display: inline-block;
+            width: max-content;
+            padding: 10px;
+            color: white;
+
+            &:hover {
+                filter: variables.$brightness;
+            }
+        }
+
+        button {
+            margin-bottom: 10px;
+            font-family: variables.$font;
+            font-size: 1.5rem;
+            padding: 10px;
+            background-color: variables.$buttonColor;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                filter: variables.$brightness;
+            }
+        }
+    }
+}
