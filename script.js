@@ -63,9 +63,8 @@ function createBook(book) {
     const card = document.createElement('div');
     const title = document.createElement('p');
     const author = document.createElement('p');
-    const read = document.createElement('p');
+    const read = document.createElement('button');
     const remove = document.createElement('button');
-    const lineBreak = document.createElement('br');
 
     card.classList.add('book-card');
     card.setAttribute('id', library.indexOf(book));
@@ -80,7 +79,7 @@ function createBook(book) {
 
     read.classList.add('read');
     read.style.cursor = 'pointer';
-    book.read ? (read.textContent = 'Read', read.style.backgroundColor = 'green') : (read.textContent = 'Not read', read.style.backgroundColor = 'red');
+    book.read ? (read.textContent = 'Read', card.style.backgroundColor = 'rgb(218, 230, 255)') : (read.textContent = 'Not read', card.style.backgroundColor = 'rgb(65, 84, 126)');
 
     read.addEventListener('click', () => {
         book.read = !book.read;
@@ -88,8 +87,6 @@ function createBook(book) {
     });
 
     card.appendChild(read);
-
-    card.appendChild(lineBreak);
 
     remove.classList.add('remove-book');
     remove.textContent = 'Remove';

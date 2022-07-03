@@ -6,7 +6,7 @@ $brightness: brightness(75%);
 @mixin button {
     font-family: $font;
     font-size: 1.5rem;
-    padding: 5px;
+    padding: 0.7rem;
     background-color: $buttonColor;
     border-radius: 25px;
     border: none;

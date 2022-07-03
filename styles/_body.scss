@@ -22,19 +22,8 @@
             padding: 10px;
         }
 
-        .read {
-            display: inline-block;
-            width: max-content;
-            padding: 10px;
-            color: white;
-
-            &:hover {
-                filter: variables.$brightness;
-            }
-        }
-
         button {
-            margin-bottom: 10px;
+            margin: 10px;
             @include variables.button;
         }
     }
