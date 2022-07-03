@@ -11,14 +11,17 @@ const removeAll = document.querySelector('#remove-all');
 submit.addEventListener('click', () => {
     if (title.value.trim() && author.value.trim() != '')
         storeBook();
+    form.reset();
 });
 
 removeAll.addEventListener('click', clearAll);
 
-function Book() {
-    this.title = title.value;
-    this.author = author.value;
-    this.read = read.checked;
+class Book {
+    constructor() {
+        this.title = title.value;
+        this.author = author.value;
+        this.read = read.checked;
+    }
 }
 
 function storeBook() {
@@ -26,8 +29,6 @@ function storeBook() {
     library.push(book);
 
     saveData();
-    form.reset();
-
     render();
 }
 
