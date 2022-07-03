@@ -4,15 +4,15 @@ $buttonColor: rgb(82, 159, 204);
 $brightness: brightness(75%);
 
 @mixin button {
-    font-family: variables.$font;
+    font-family: $font;
     font-size: 1.5rem;
     padding: 5px;
-    background-color: variables.$buttonColor;
+    background-color: $buttonColor;
     border-radius: 25px;
     border: none;
     cursor: pointer;
 
     &:hover {
-        filter: variables.$brightness;
+        filter: $brightness;
     }
 }
