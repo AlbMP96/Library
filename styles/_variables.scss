@@ -2,3 +2,17 @@ $font: 'Dancing Script', cursive;
 $shadow: 10px 10px 8px #888888;
 $buttonColor: rgb(82, 159, 204);
 $brightness: brightness(75%);
+
+@mixin button {
+    font-family: variables.$font;
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: variables.$buttonColor;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        filter: variables.$brightness;
+    }
+}

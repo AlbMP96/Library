@@ -35,17 +35,7 @@
 
         button {
             margin-bottom: 10px;
-            font-family: variables.$font;
-            font-size: 1.5rem;
-            padding: 10px;
-            background-color: variables.$buttonColor;
-            border-radius: 25px;
-            border: none;
-            cursor: pointer;
-
-            &:hover {
-                filter: variables.$brightness;
-            }
+            @include variables.button;
         }
     }
 }
