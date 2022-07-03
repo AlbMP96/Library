@@ -29,7 +29,6 @@ function storeBook() {
     library.push(book);
 
     saveData();
-    render();
 }
 
 function saveData() {
