@@ -12,11 +12,11 @@ header {
         input {
             margin-right: 20px;
             margin-bottom: 15px;
-        }
 
-        input[type=checkbox] {
-            height: 1.5rem;
-            width: 1.5rem;
+            &[type=checkbox] {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
         }
         
         button {

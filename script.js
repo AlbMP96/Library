@@ -9,7 +9,7 @@ const submit = document.querySelector('#submit');
 const removeAll = document.querySelector('#remove-all');
 
 submit.addEventListener('click', () => {
-    if (title.value && author.value != '')
+    if (title.value.trim() && author.value.trim() != '')
         storeBook();
 });
 
@@ -54,9 +54,7 @@ function render() {
     const books = document.querySelectorAll('.book-card');
     books.forEach(book => bookshelf.removeChild(book));
 
-    for (let i = 0; i < library.length; i++) {
-        createBook(library[i]);
-    }
+    library.forEach(book => createBook(book));
 }
 
 function createBook(book) {
@@ -84,7 +82,7 @@ function createBook(book) {
     book.read ? (read.textContent = 'Read', read.style.backgroundColor = 'green') : (read.textContent = 'Not read', read.style.backgroundColor = 'red');
 
     read.addEventListener('click', () => {
-        book.read ? book.read = false : book.read = true;
+        book.read = !book.read;
         saveData();
     });
 
