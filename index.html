@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +10,32 @@
 
     <title>Library</title>
 </head>
+
 <body>
     <header>
         <form id="form">
-            <label for="title">Title</label>
-            <input type="text" id="title" required>
-            <label for="author">Author</label>
-            <input type="text" id="author" required>
-            <label for="read">Read</label>
-            <input type="checkbox" name="read" id="read">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" required>
+            </div>
+            <div>
+                <label for="read">Read</label>
+                <input type="checkbox" name="read" id="read">
+            </div>
             <br>
-            <button type="submit" form="form" id="submit">Add book</button>
-            <button id="remove-all">Remove all books</button>
+            <div>
+                <button type="submit" form="form" id="submit">Add book</button>
+                <button id="remove-all">Remove all books</button>
+            </div>
         </form>
     </header>
     <div id="bookshelf">
-        
+
     </div>
 </body>
+
 </html>

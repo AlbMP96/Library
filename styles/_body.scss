@@ -3,17 +3,17 @@
 #bookshelf {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    row-gap: 50px;
 
     margin-top: 3%;
-    margin-left: 15%;
-    margin-right: 15%;
     margin-bottom: 3%;
 
     text-align: center;
     font-size: 1.5rem;
 
     .book-card {
+        margin-left: 5%;
+        margin-right: 5%;
         background-color: rgb(218, 230, 255);
         border: 1px solid black;
         box-shadow: variables.$shadow;
@@ -47,5 +47,17 @@
                 filter: variables.$brightness;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #bookshelf {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #bookshelf {
+        grid-template-columns: 1fr;
     }
 }

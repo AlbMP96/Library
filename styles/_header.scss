@@ -9,28 +9,48 @@ header {
         font-size: 2rem;
         padding: 10px;
 
-        input {
-            margin-right: 20px;
-            margin-bottom: 15px;
+        div {
+            display: inline;
 
-            &[type=checkbox] {
-                height: 1.5rem;
-                width: 1.5rem;
+            label {
+                display: inline-block;
+                width: 7rem;
+    
+                &[for=read] {
+                    width: fit-content; 
+                }
+            }
+    
+            input {
+                margin-right: 20px;
+                margin-bottom: 15px;
+    
+                &[type=checkbox] {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+            
+            button {
+                font-family: variables.$font;
+                font-size: 1.5rem;
+                padding: 5px;
+                background-color: variables.$buttonColor;
+                border-radius: 25px;
+                border: none;
+                cursor: pointer;
+    
+                &:hover {
+                    filter: variables.$brightness;
+                }
             }
         }
-        
-        button {
-            font-family: variables.$font;
-            font-size: 1.5rem;
-            padding: 5px;
-            background-color: variables.$buttonColor;
-            border-radius: 25px;
-            border: none;
-            cursor: pointer;
+    }
+}
 
-            &:hover {
-                filter: variables.$brightness;
-            }
-        }
+@media only screen and (max-width: 730px) {
+    form {
+        display: flex;
+        flex-direction: column;
     }
 }
